@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Statistics from './Statistics'
 
 const App = () => {
   const [good, setGood] = useState(0)
@@ -24,18 +25,15 @@ const App = () => {
           Bad
         </button>
       </div>
-
-      <h2>Statistics</h2>
-
-      <div>
-        <p>Good: {good}</p>
-        <p>Neutral: {neutral}</p>
-        <p>Bad: {bad}</p>
-
-        <p>All: {all}</p>
-        <p>Average: {average}</p>
-        <p>Positive: {positive} %</p>
-      </div>
+      
+    <Statistics
+      good={good}
+      neutral={neutral}
+      bad={bad}
+      all={all}
+      average={average}
+      positive={positive}
+    />
 
     </div>
   )
