@@ -1,4 +1,13 @@
 const Statistics = (props) => {
+    if (props.all === 0) {
+        return (
+            <div>
+                <h2>Statistics</h2>
+                <p>No feedback given</p>
+            </div>
+        )
+    }
+
     return (
         <div>
             <h2>Statistics</h2>
