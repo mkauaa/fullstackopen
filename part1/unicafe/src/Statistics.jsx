@@ -1,3 +1,5 @@
+import StatisticsLine from "./StatisticsLine"
+
 const Statistics = (props) => {
     if (props.all === 0) {
         return (
@@ -13,13 +15,13 @@ const Statistics = (props) => {
             <h2>Statistics</h2>
 
             <div>
-                <p>Good: {props.good}</p>
-                <p>Neutral: {props.neutral}</p>
-                <p>Bad: {props.bad}</p>
+                <StatisticsLine text="Good" value={props.good} />
+                <StatisticsLine text="Neutral" value={props.neutral} />
+                <StatisticsLine text="Bad" value={props.bad} />
 
-                <p>All: {props.all}</p>
-                <p>Average: {props.average}</p>
-                <p>Positive: {props.positive} %</p>
+                <StatisticsLine text="All" value={props.all} />
+                <StatisticsLine text="Average" value={props.average} />
+                <StatisticsLine text="Positive" value={`${props.positive} %`} />
             </div>
         </div>
 )}
